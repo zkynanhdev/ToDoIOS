@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="todocellTableViewCell" customModule="first_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="index" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdp-3W-9Tv">
+                        <rect key="frame" x="50" y="11.666666666666664" width="41" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ply-1t-v89">
+                        <rect key="frame" x="106" y="11.666666666666664" width="42.333333333333343" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XA-3H-cnp">
+                        <rect key="frame" x="176" y="4.6666666666666679" width="54" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                        <connections>
+                            <action selector="btEdit:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NiF-Au-xpd"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIx-IU-Wu7">
+                        <rect key="frame" x="230" y="4.6666666666666679" width="74" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                        <connections>
+                            <action selector="btDelete:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DdT-lW-YLq"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ply-1t-v89" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IVX-fw-epY"/>
+                    <constraint firstItem="xIx-IU-Wu7" firstAttribute="leading" secondItem="9XA-3H-cnp" secondAttribute="trailing" id="QBG-Yf-SM4"/>
+                    <constraint firstItem="9XA-3H-cnp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QnG-nP-CPN"/>
+                    <constraint firstItem="Bdp-3W-9Tv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="WV5-2W-0MA"/>
+                    <constraint firstItem="xIx-IU-Wu7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Weu-XV-BY5"/>
+                    <constraint firstAttribute="trailing" secondItem="xIx-IU-Wu7" secondAttribute="trailing" constant="16" id="aI8-8D-AQ1"/>
+                    <constraint firstItem="ply-1t-v89" firstAttribute="leading" secondItem="Bdp-3W-9Tv" secondAttribute="trailing" constant="15" id="gBe-Gf-5Jg"/>
+                    <constraint firstItem="Bdp-3W-9Tv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="i7n-iN-KsU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="indexLB" destination="Bdp-3W-9Tv" id="n7y-Zz-he2"/>
+                <outlet property="nameLB" destination="ply-1t-v89" id="54S-ha-4Do"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="-12.67605633802817"/>
+        </tableViewCell>
+    </objects>
+</document>
