@@ -55,7 +55,23 @@ class ViewController: UIViewController {
         return totos
     }
     
+    @IBAction func action() {
+//        let storyboard2 = UIStoryboard(name: "Storyboard2", bundle: nil)
+//        let viewController = storyboard2.instantiateViewController(withIdentifier: "Storyboard2Home")
+        let collectionController = CollectionController(nibName: "CollectionController", bundle: nil)
+        navigationController?   .pushViewController(collectionController, animated: true)
+    }
+    
+    @IBAction func storyboard3open(_ sender: UIButton) {
+        
+        let storyboard3 = UIStoryboard(name: "Storyboard3", bundle: nil)
+        let viewController = storyboard3.instantiateViewController(withIdentifier: "Storyboard3Home")
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 }
+
+
 
 extension ViewController: ToDoDelegate {
     func onToDoReady(todoData: ToDoData) {
